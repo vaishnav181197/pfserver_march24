@@ -1,0 +1,124 @@
+NODE JS parts:-
+
+1.GLOBAL
+console,Promise,number etc
+2.Module : (require('path'),module.export,exports.)
+    -FileSystem - fs
+    -HTTP module
+    -URL
+    -nodemailer
+
+->package.json - node_modules configuration file
+->package-lock.json-holds version and details of node_moudles contents
+->node_modules - a folder to store copy of modules that we locally needed
+->EventEmitter - to define events
+    -->Process : The process object provides information about, and control over, the current Node.js process.
+    -->dotenv
+=>API-server
+JSON,XML
+Client<--->API<--->Server
+REST,SOAP,FAST etc--->REST(REpresentational State Transfer)[HTTP protocol based,Comparatively faster,Simpler architecture,JSON]
+-Express.js
+JSON-JavaScript Object Notation ={name:"ajith",age:20} ===>{"name":"ajith","age":20}
+
+
+->Express server
+
+-npm init -y : to initialize node.js server
+-npm i express : to install express
+
+.env - runtime environmental file
+
+-npm i dotenv - package to access .env variables
+-npm i cors - cors[Cross origin Resource Sharing]-built in middleware[a function that can access and process requests 
+                   before it hits the server]
+
+-->Software Pattern/Architecture:
+1.MVC[Model-View-Controller]
+Model - Component that helps to interact with db. 
+View - Component where user interacts
+Controller - Component which handles the working logic of server
+
+2.MVT[Model-View-Template]
+Model - Component that helps to interact with db. 
+View - Component that handles work logic.And also make sure how response is rendered in template
+Template - User Interface
+etc
+
+->Request = Header + Body
+
+
+MongoDB:==>
+->what is mongodb
+-mongodb is a no-sql non-relational schemaless json-document based dbms
+
+->what are the features
+-No-SQL
+-Non-Relational
+-No specific Schema
+-Open-source
+-Data collected as JSON Documents
+-flexible
+
+---RDBMS--- ---MongoDB---
+Database        Database
+Table           Collection
+tuple/row       Document
+Column          Fields
+Primary Key     _id [12 character hexadecimal value]
+
+->Advantages
+- Schemaless,Flexible,No-SQL etc
+- Faster
+- Scalable
+
+
+== $eq
+> $gt
+>= $gte
+< $lt
+<= $lte
+!= $ne
+in $in
+not in  $nin
+
+=>Mongoose:
+-its mongodb object modelling tool
+-for initializing schema and model for mongodb dbs and connect to them for database access and manipulation
+-we can implement schema,validation,business logic etc
+- to install
+    npm i mongoose
+
+->nodemon : tool for autocompilation
+
+
+=>JWT authentication(JSON Web Token):
+-a token will be provided to a user while authentication completes.
+-token will be mandatory for every authorised requests
+
+-npm i jsonwebtoken
+
+-sign() - to generate token
+-verify() - to verify a token
+
+=>middleware:
+
+- a special function which can act between server and client
+- it can analyse/check a request before it reaches the server app
+- syntax:
+
+const middlewarefuncn=(req,res,next)=>{
+
+}
+
+-two type:
+
+    application level middleware : a middleware implemented to the entire app
+    router specific middleware : a middleware implemented specifically to a route
+
+->Multer:
+
+-3rd party middleware package for file handling
+-configure
+-install 
+npm i multer
